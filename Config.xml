@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+<bean class="com.aj.beans.Address" id="Addr">
+<property name="Pcode" value="416012"/>
+<property name="street" value="Ram Galli"/>
+<property name="Resident1">
+<list >
+<value>Kinara Kamal Apt.</value>
+<value>Mangalwar Peth</value>
+<value>Kolhapur</value>
+</list>
+</property>
+</bean>
+
+
+
+<bean class="com.aj.beans.Employee" id="Eobj">
+<property name="Eid" value="1"/>
+<property name="Ename" value="Ajinkya"/>
+<property name="MonSal">
+<map>
+<entry key="Jan" value="7100000"></entry>
+<entry key="Feb" value="8100000"></entry>
+<entry key="Ded" value="9100000"></entry>
+</map>
+</property>
+<property name="Aobj" ref="Addr"></property>
+</bean>
+</beans>
